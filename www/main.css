@@ -1,0 +1,27 @@
+body {
+    font-family: Montserrat;
+}
+
+div#page-header {
+    min-height: 200px;
+}
+
+div#page-header-left {
+    float: left;
+}
+
+div#page-header-right {
+    float: right;
+}
+
+p {
+    margin-top: 5px;
+}
+
+div#page-body {
+    width: 984px;
+    margin: 0px auto;
+    border-left: 1px solid #DEDEDE;
+    border-right: 1px solid #DEDEDE;
+    padding: 15px;
+}
