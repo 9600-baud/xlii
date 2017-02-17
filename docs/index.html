@@ -35,8 +35,18 @@
 	<p>
 	  Enter the world of <a href="https://en.wikipedia.org/wiki/Exokernel"><span style='color: #f8512f;'>exokernels</span></a>, where direct access to resources such as memory and hardware IO (if seperable) is alloable given good cause. Exokernels provide a world where abstraction is a choice, not a necessity. This approach can provide a number of benefits if carefully implemented such as increased performance and stability.
 	</p>
+
+	<h2>A focused concept</h2>
+	<p>Xlii (Pronounced System 42) needs only a few components to form a working system: A boot stub, a memory manager, a stream manager and a process manager. Xlii is unique in the fact that there is no process scheduler. Instead, processes that require a main loop form a linked list, while others (called services) just hang out somewhere in coordinated memory. All of these processes are coordinated but not driven by the process manager.
+	</p>
+	<p>
+	  There is no concept of prioritized scheduling in Xlii's design, however the Xlii project values a simple mechanism we call "Data movement before data processing". This simply means that the movement of data between processes and hardware or other processes  is valued higher than the distribution of cputime to each process running on the system. Before any process continues execution all data is moved to their destinations via the stream manager.
+	</p>
+	<p>
+	  Streams are an important component of the Xlii operating system. The stream manager coordinates the streams, and the streams coordinate the data for all Inter-Process Communication (IPC). Processes are also capable of representing themselves as streams with a main loop for purposes such as networking where the other end of the stream may be thousands of miles accross the planet. It is also important to note that system calls are non traditional, and are performed over streams.
+	</p>
       </div>
-      
+
       <divid='page-footer'>
     </div>
   </body>

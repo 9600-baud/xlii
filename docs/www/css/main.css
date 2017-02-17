@@ -20,6 +20,7 @@ h1 {
 }
 
 h2 {
+    margin-top: 48px;
     font-family: 'Rajdhani', sans-serif;
     font-size: 24pt;
     font-weight: normal;
@@ -27,7 +28,6 @@ h2 {
 }
 
 div#page-body {
-    padding-top: 25px;
     font-family: 'Quicksand', sans-serif;
     font-weight: normal;
     font-size: 16pt;
