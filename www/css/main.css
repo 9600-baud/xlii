@@ -1,0 +1,91 @@
+body {
+    background-color: #111111;
+    color: #BBBBBB;
+    line-height: 2.1em;
+    background-image: url("../img/45-degree-fabric-dark.png");
+}
+
+div#page-container {
+    margin: 0px auto;
+    width: 984px;
+}
+
+h1 {
+    //font-family: 'Nunito Sans', sans-serif;
+    font-size: 48pt;
+    margin-bottom: 64px;
+    font-family: 'Abel', sans-serif;
+    font-weight: normal;
+    text-shadow: 1px 1px #444444;
+}
+
+h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 24pt;
+    font-weight: normal;
+    color: #CCCCCC;
+}
+
+div#page-body {
+    padding-top: 25px;
+    font-family: 'Harmattan', sans-serif;
+    font-weight: normal;
+    font-size: 20pt;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div#page-header {
+    margin-top: 50px;
+    //border: 1px solid red;
+    overflow: hidden
+}
+
+p.quote-body {
+    font-family: 'Gentium Basic', serif;
+    font-size: 20pt;
+    font-style: italic;
+    font-weight: bold;
+    //padding: 13px;
+}
+
+p.quote-reference {
+    width: 100%;
+    text-align: right;
+    margin: 0px auto;
+    font-size: 16pt;
+    //margin-top: -23px;
+    /* font-family: 'Gentium Basic', serif; */
+    font-style: italic;
+}
+
+div.quote-container {
+    padding-right: 25px;
+    padding-left: 25px;
+    border: 1px solid #1f1f1f;
+    padding-bottom: 25px;
+    background-color: #151515;
+    //margin-top: -40px;
+    width: 725px;
+    //border: 1px dotted yellow;
+    float: right;
+    clear: both;
+    background-image: url("../img/black-linen.png");
+    //box-shadow: 10px 10px 5px #888888;
+	
+}
+
+hr {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #111111, #222, #111111);
+}
+
+p {
+    text-indent: 35px;
+}
+
+a { text-decoration: none; }
