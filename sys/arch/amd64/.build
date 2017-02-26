@@ -1,0 +1,5 @@
+---
+type:        boot_stub
+provides:    xlii_boot.img
+...
+

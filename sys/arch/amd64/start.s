@@ -140,3 +140,7 @@ Realm64:
 [bits 64]
 	extern _main
 	call _main
+
+	cli
+.halt: 	hlt
+	jmp .halt

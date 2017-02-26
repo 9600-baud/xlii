@@ -1,0 +1,5 @@
+---
+arch: amd64
+name: My test amd64 kernel
+...
+

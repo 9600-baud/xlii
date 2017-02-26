@@ -1,0 +1,52 @@
+#!/usr/bin/env perl
+
+use warnings;
+use strict;
+no warnings 'experimental';
+
+use File::Find;
+use FindBin qw($Bin);
+use YAML::Tiny;
+use feature ":5.10";
+
+my $srcdir = "$Bin/../sys/";
+my @options;
+
+my $config;
+{
+	local $/ = undef;
+	$config = <>;
+}
+
+$config = (YAML::Tiny->read_string($config))->[0];
+
+sub build_index {
+	my $path = shift;
+	my @dirs;
+
+	find sub {
+		return unless -d;
+		return unless -f $_ . '/.build';
+		
+		push @dirs, $File::Find::name;
+	}, $path;
+
+	@dirs;
+}
+
+my @proj_dirs = build_index($srcdir);
+foreach my $project (@proj_dirs) {
+	my $buildopts = (YAML::Tiny->read($project . '/.build'))->[0];
+	use Data::Dumper;
+	
+	use v5.24;
+	given ($buildopts->{'type'}) {	
+		when ('boot_stub') {
+			if ($buildopts->{'provides'} eq $config->{'arch'}) {
+				# Add the boot stub project to the list:
+				print 'BOOT_STUB := ' . $project . "\n";
+			}
+		}
+	}
+}		
+
